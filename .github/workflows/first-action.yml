@@ -5,6 +5,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Print greetings
-        run: echo "Hello, this is my first print from the workflow"
+        run: |
+          echo "Hello, this is my first print from the workflow"
+          echo "hi"
       - name: Print goodbye
         run: echo "Bye mate"
