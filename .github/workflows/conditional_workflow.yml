@@ -3,6 +3,11 @@ on:
   pull_request:
     types: [opened, edited]
   workflow_dispatch:
+  push:
+    branches: 
+      - main
+      - "dev-*" # dev-new, dev-this-branch
+      - "feature/**" # feature/new, feature/new/button
 jobs:
   deploy:
     runs-on: ubuntu-latest
