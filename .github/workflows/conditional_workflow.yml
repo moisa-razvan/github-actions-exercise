@@ -4,7 +4,7 @@ on:
     types: [opened, edited]
   workflow_dispatch:
   push:
-    branches: 
+    branches-ignore: 
       - main
       - "dev-*" # dev-new, dev-this-branch
       - "feature/**" # feature/new, feature/new/button
