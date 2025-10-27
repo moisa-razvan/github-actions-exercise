@@ -1,5 +1,7 @@
 name: Push Workflow
-on: [push, workflow_dispatch]
+on:
+  # - push
+  - workflow_dispatch
 jobs: 
   push_workflow:
     runs-on: windows-latest
