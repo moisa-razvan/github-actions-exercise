@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -33,8 +34,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Test code
+        id: test_result
         run: npm run test
       - name: Upload test report
+        if: steps.test_result.outcome == "failure"
         uses: actions/upload-artifact@v3
         with:
           name: test-report
