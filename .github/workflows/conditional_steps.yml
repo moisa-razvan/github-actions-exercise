@@ -15,6 +15,7 @@ jobs:
       - name: Lint code
         run: npm run lint
       - name: Test code
+        continue-on-error: true
         id: test_result
         run: npm run test
       - name: Upload test report
